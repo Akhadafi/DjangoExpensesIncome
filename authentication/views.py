@@ -7,6 +7,25 @@ from django.views import View
 
 
 # Create your views here.
+class EmailValidationView(View):
+    def post(self, request):
+        data = json.loads(request.body)
+        username = data["username"]
+        if not str(username).isalnum():
+            return JsonResponse(
+                {
+                    "username_error": "username should only contain alphanumeric character"
+                },
+                status=400,
+            )
+        if User.objects.filter(username=username).exists():
+            return JsonResponse(
+                {"username_error": "sory username in use, choose another one"},
+                status=409,
+            )
+        return JsonResponse({"username_valid": True})
+
+
 class UsernameValidationView(View):
     def post(self, request):
         data = json.loads(request.body)

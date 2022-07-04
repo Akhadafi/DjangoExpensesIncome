@@ -1,5 +1,5 @@
 """
-ASGI config for pengeluaran_pendapatan project.
+ASGI config for expenseswebsite project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pengeluaran_pendapatan.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'expenseswebsite.settings')
 
 application = get_asgi_application()

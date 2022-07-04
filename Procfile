@@ -1,1 +1,1 @@
-web: gunicorn pengeluaran_pendapatan.wsgi
+web: gunicorn expenseswebsite.wsgi --log-file -
