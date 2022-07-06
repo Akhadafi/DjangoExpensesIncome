@@ -1,9 +1,3 @@
-<!-- Django -->
-
-#
-
-<p align="center"><a href="https://djangoproject.com" target="_blank"><img src="https://static.djangoproject.com/img/icon-touch.e4872c4da341.png" width="80"> <img src="https://static.djangoproject.com/img/logo-django.42234b631760.svg" width="200"></a></p>
-
 # Django
 
 > The web framework for perfectionists with a deadline.
