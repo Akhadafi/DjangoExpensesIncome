@@ -1,5 +1,6 @@
 import json
 
+from django.contrib import messages
 from django.contrib.auth.models import User
 from django.http import JsonResponse
 from django.shortcuts import render
@@ -46,4 +47,11 @@ class UsernameValidationView(View):
 
 class RegistrationView(View):
     def get(self, request):
+        return render(request, "authentication/register.html")
+
+    def post(self, request):
+        messages.success(request, "Seuccess whatsapp success")
+        messages.warning(request, "Seuccess whatsapp warning")
+        messages.info(request, "Seuccess whatsapp info")
+        messages.error(request, "Seuccess whatsapp error")
         return render(request, "authentication/register.html")
